@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #681515;
+    overflow: hidden;
+}
+
+h2{
+    color: #efefef;
+    font-size: 5em;
+    user-select: none;
+    text-align: center;
+}
+i{
+    position: fixed;
+    border-radius: 50%;
+    background: #fff;
+    width: 50px;
+    height: 50px;
+    pointer-events: none;
+    animation: animate 2s ease-out forwards;
+}
+@keyframes animate {
+    0%{
+        opacity: 1;
+        transform: translate(0,0);
+    }
+    100%{
+        opacity: 0;
+        transform: translate(var(--randomX), var(--randomY));
+    }
+}
